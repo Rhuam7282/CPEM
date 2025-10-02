@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPEM - Coletivo de Professores que Ensinam Matemática</title>
+    <link rel="stylesheet" href="css/estiloPrincipal.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/temas/salaAula.css">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Handlee&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho quadroNegro">
+        <div class="containerPrincipal">
+            <h1 class="tituloPrincipal">CPEM</h1>
+            <nav class="navegacaoPrincipal">
+                <ul class="listaNavegacao">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="encontros.html">Encontros</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudoPrincipal">
+        <!-- Carrossel de Notícias -->
+        <section class="secaoCarrossel">
+            <div class="carrosselContainer" id="carrosselNoticias">
+                <!-- Carregado via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Boas-vindas -->
+        <section class="secaoBoasVindas muralCortica">
+            <div class="containerPrincipal">
+                <h2 class="tituloSecundario">Bem-vindo ao CPEM</h2>
+                <div class="textoBoasVindas quadroBranco">
+                    <p>O Coletivo de Professores que Ensinam Matemática (CPEM) é um projeto de extensão acadêmica dedicado ao apoio pedagógico de professores de matemática do ensino fundamental.</p>
+                    <p>Nossa missão é criar uma comunidade colaborativa onde educadores possam compartilhar experiências, recursos e conhecimentos para melhorar o ensino da matemática.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eventos em Destaque -->
+        <section class="secaoEventos">
+            <div class="containerPrincipal">
+                <h2 class="tituloSecundario">Eventos em Destaque</h2>
+                <div class="gridEventos" id="gridEventosDestaque">
+                    <!-- Carregado via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Mapa do Site -->
+        <section class="secaoMapaSite quadroBranco">
+            <div class="containerPrincipal">
+                <h2 class="tituloSecundario">Explore o CPEM</h2>
+                <div class="gridMapaSite">
+                    <div class="cardMapa postIt">
+                        <h3>📰 Notícias</h3>
+                        <p>Fique por dentro das últimas novidades do projeto</p>
+                    </div>
+                    <div class="cardMapa postIt">
+                        <h3>🎯 Eventos</h3>
+                        <p>Confira nossa participação em eventos educacionais</p>
+                    </div>
+                    <div class="cardMapa postIt">
+                        <h3>👥 Encontros</h3>
+                        <p>Acesse os registros dos nossos encontros quinzenais</p>
+                    </div>
+                    <div class="cardMapa postIt">
+                        <h3>📞 Contato</h3>
+                        <p>Entre em contato com nossa equipe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="secaoNewsletter">
+            <div class="containerPrincipal">
+                <div class="cardNewsletter quadroBranco">
+                    <h2 class="tituloSecundario">📧 Newsletter</h2>
+                    <p>Receba novidades e atualizações do CPEM em seu email</p>
+                    <form class="formularioNewsletter" id="formNewsletter">
+                        <input type="email" placeholder="Seu melhor email" required class="campoEmail">
+                        <button type="submit" class="botaoPrimario">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape quadroNegro">
+        <div class="containerPrincipal">
+            <p>&copy; 2024 CPEM - Coletivo de Professores que Ensinam Matemática</p>
+            <p>Projeto de Extensão Acadêmica</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/carrossel.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

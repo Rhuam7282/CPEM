@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "frontend/imagens/conteudo"
+public_folder: "/imagens/conteudo"
+
+collections:
+  - name: "noticias"
+    label: "Notícias"
+    folder: "frontend/content/noticias"
+    create: true
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+      - { label: "Data", name: "data", widget: "datetime" }
+      - { label: "Imagem de Capa", name: "imagemCapa", widget: "image" }
+      - { label: "Texto", name: "texto", widget: "markdown" }
+
+  - name: "eventos"
+    label: "Eventos"
+    folder: "frontend/content/eventos"
+    create: true
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+      - { label: "Data", name: "data", widget: "datetime" }
+      - { label: "Local", name: "local", widget: "string" }
+      - { label: "Descrição", name: "descricao", widget: "markdown" }
+
+  - name: "encontros"
+    label: "Encontros"
+    folder: "frontend/content/encontros"
+    create: true
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Data", name: "data", widget: "datetime" }
+      - { label: "Resumo", name: "resumo", widget: "text" }
+      - { label: "Materiais", name: "materiais", widget: "list", fields: [{label: "Arquivo", name: "arquivo", widget: "file"}] }

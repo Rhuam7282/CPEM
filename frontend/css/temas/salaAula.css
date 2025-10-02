@@ -1,0 +1,166 @@
+/* ===== ELEMENTOS ESQUEUMÓRFICOS ===== */
+.quadroNegro {
+    background-color: var(--cor-quadro-negro);
+    color: var(--cor-giz);
+    border: 8px solid #1a252f;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.quadroNegro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 98%, rgba(255,255,255,0.1) 100%);
+    pointer-events: none;
+}
+
+.quadroBranco {
+    background-color: var(--cor-quadro-branco);
+    color: var(--cor-canetao);
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: var(--espaco-medio);
+}
+
+.muralCortica {
+    background-color: var(--cor-cortica);
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(139, 69, 19, 0.8) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(160, 82, 45, 0.6) 0%, transparent 20%);
+    border: 15px solid #654321;
+    border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><rect width="20" height="20" fill="%23654321"/><path d="M0,0 L20,20 M20,0 L0,20" stroke="%234a2c0a" stroke-width="2"/></svg>') 30 round;
+    padding: var(--espaco-grande);
+    position: relative;
+}
+
+.muralCortica::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(0,0,0,0.1) 10px,
+            rgba(0,0,0,0.1) 20px
+        );
+    pointer-events: none;
+    z-index: -1;
+}
+
+.postIt {
+    background-color: var(--cor-postit);
+    background: linear-gradient(135deg, #ffeb3b 0%, #fbc02d 100%);
+    color: var(--cor-canetao);
+    padding: var(--espaco-medio);
+    border-radius: 2px;
+    box-shadow: 
+        2px 2px 4px rgba(0,0,0,0.2),
+        inset 0 -8px 8px -8px rgba(0,0,0,0.3);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.postIt::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.1) 50%);
+}
+
+.postIt:nth-child(even) {
+    transform: rotate(1deg);
+    background: linear-gradient(135deg, #4fc3f7 0%, #0288d1 100%);
+    color: white;
+}
+
+.postIt:nth-child(3n) {
+    transform: rotate(-2deg);
+    background: linear-gradient(135deg, #81c784 0%, #388e3c 100%);
+    color: white;
+}
+
+.postIt:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 
+        4px 4px 8px rgba(0,0,0,0.3),
+        inset 0 -8px 8px -8px rgba(0,0,0,0.3);
+}
+
+.abaArquivo {
+    background-color: var(--cor-giz);
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    display: inline-block;
+    margin-right: 2px;
+    position: relative;
+    top: 1px;
+    font-family: var(--fonte-corpo);
+    font-size: 0.9rem;
+}
+
+.abaArquivo.ativo {
+    background-color: var(--cor-quadro-branco);
+    border-color: #999;
+    z-index: 2;
+}
+
+/* ===== EFEITOS DE ESCRITA ===== */
+.textoGiz {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-giz);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.textoCanetao {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-canetao);
+    font-weight: bold;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes aparecerDaEsquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerDeCima {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animacaoEntrada {
+    animation: aparecerDaEsquerda 0.6s ease-out;
+}
+
+.animacaoFlutuar {
+    animation: aparecerDeCima 0.8s ease-out;
+}

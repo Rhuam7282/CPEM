@@ -1,0 +1,128 @@
+/* ===== VARIÁVEIS E CONFIGURAÇÕES GLOBAIS ===== */
+:root {
+    /* Cores Temáticas */
+    --cor-giz: #f8f9fa;
+    --cor-quadro-branco: #ffffff;
+    --cor-quadro-negro: #2c3e50;
+    --cor-canetao: #2c3e50;
+    --cor-cortica: #8b4513;
+    --cor-postit: #ffeb3b;
+    --cor-vermelho-caneta: #A62E2E;
+    --cor-verde-caneta: #2D623C;
+    
+    /* Cores Principais */
+    --verde-principal: #2EA650;
+    --azul-principal: #2E39A6;
+    --vermelho-principal: #A62E2E;
+    --azul-claro: #6F7DF2;
+    --verde-claro: #2D623C;
+    
+    /* Fontes */
+    --fonte-titulo: 'Merienda', cursive;
+    --fonte-subtitulo: 'Edu NSW ACT Cursive', cursive;
+    --fonte-corpo: 'Handlee', cursive;
+    
+    /* Espaçamentos */
+    --espaco-pequeno: 0.5rem;
+    --espaco-medio: 1rem;
+    --espaco-grande: 2rem;
+}
+
+/* ===== RESET E ESTILOS BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-giz);
+    color: var(--cor-canetao);
+    line-height: 1.6;
+}
+
+.containerPrincipal {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaco-medio);
+}
+
+/* ===== TIPOGRAFIA ===== */
+.tituloPrincipal {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-giz);
+    margin-bottom: var(--espaco-medio);
+}
+
+.tituloSecundario {
+    font-family: var(--fonte-subtitulo);
+    font-size: 2rem;
+    color: var(--cor-canetao);
+    margin-bottom: var(--espaco-medio);
+}
+
+.tituloTerciario {
+    font-family: var(--fonte-subtitulo);
+    font-size: 1.5rem;
+    color: var(--cor-canetao);
+    margin-bottom: var(--espaco-pequeno);
+}
+
+/* ===== LAYOUT ===== */
+.gridNoticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espaco-medio);
+    margin: var(--espaco-grande) 0;
+}
+
+.flexCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-medio);
+    justify-content: center;
+}
+
+/* ===== COMPONENTES DE LAYOUT ===== */
+.secaoCarrossel {
+    margin: var(--espaco-grande) 0;
+}
+
+.secaoBoasVindas {
+    padding: var(--espaco-grande) 0;
+}
+
+.secaoEventos {
+    padding: var(--espaco-grande) 0;
+}
+
+.secaoMapaSite {
+    padding: var(--espaco-grande) 0;
+}
+
+.secaoNewsletter {
+    padding: var(--espaco-grande) 0;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .containerPrincipal {
+        width: 95%;
+        padding: var(--espaco-pequeno);
+    }
+    
+    .tituloPrincipal {
+        font-size: 2rem;
+    }
+    
+    .tituloSecundario {
+        font-size: 1.5rem;
+    }
+    
+    .gridNoticias {
+        grid-template-columns: 1fr;
+    }
+}

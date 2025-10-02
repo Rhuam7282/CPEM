@@ -1,0 +1,137 @@
+/* ===== COMPONENTES REUTILIZÁVEIS ===== */
+.cardBase {
+    background: var(--cor-quadro-branco);
+    border-radius: 8px;
+    padding: var(--espaco-medio);
+    margin-bottom: var(--espaco-medio);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardBase:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.botaoPrimario {
+    background-color: var(--azul-principal);
+    color: white;
+    border: none;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border-radius: 4px;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botaoPrimario:hover {
+    background-color: var(--azul-claro);
+}
+
+.botaoSecundario {
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border-radius: 4px;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botaoSecundario:hover {
+    background-color: var(--verde-claro);
+}
+
+/* ===== COMPONENTES ESPECÍFICOS ===== */
+.cardNoticia {
+    composes: cardBase;
+    border-left: 4px solid var(--vermelho-principal);
+}
+
+.cardEvento {
+    composes: cardBase;
+    border-left: 4px solid var(--verde-principal);
+}
+
+.cardEncontro {
+    composes: cardBase;
+    border-left: 4px solid var(--azul-principal);
+}
+
+.cardMapa {
+    composes: cardBase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cardMapa:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FORMULÁRIOS ===== */
+.formularioNewsletter {
+    display: flex;
+    gap: var(--espaco-pequeno);
+    margin-top: var(--espaco-medio);
+}
+
+.campoEmail {
+    flex: 1;
+    padding: var(--espaco-pequeno);
+    border: 2px solid var(--cor-cortica);
+    border-radius: 4px;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+}
+
+.campoEmail:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+}
+
+/* ===== GRIDS ===== */
+.gridEventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaco-medio);
+}
+
+.gridMapaSite {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espaco-medio);
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.cabecalho {
+    padding: var(--espaco-medio) 0;
+}
+
+.navegacaoPrincipal ul {
+    list-style: none;
+    display: flex;
+    gap: var(--espaco-grande);
+    flex-wrap: wrap;
+}
+
+.navegacaoPrincipal a {
+    color: var(--cor-giz);
+    text-decoration: none;
+    font-family: var(--fonte-subtitulo);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navegacaoPrincipal a:hover {
+    color: var(--cor-postit);
+}
+
+.rodape {
+    text-align: center;
+    padding: var(--espaco-medio) 0;
+    color: var(--cor-giz);
+    margin-top: var(--espaco-grande);
+}
